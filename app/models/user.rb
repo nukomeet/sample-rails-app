@@ -10,8 +10,6 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
 
-  # validates :username, format: { with: /\A\w+\Z/i }, length: { in: 2..12 }, presence: true, uniqueness: true
-
   def set_default_role
     self.role ||= :regular
   end
